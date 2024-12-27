@@ -114,6 +114,15 @@ address {
     background-color: transparent;
 }
 
+/* .button:disabled {
+    color: gray;
+    background-color: lightgray;
+    cursor: not-allowed;
+    border-color: currentColor;
+} */
+
+
+
 /* Link */
 
 .link {
@@ -269,7 +278,9 @@ header {
     font-weight: 300;
 }
 
-.carousel-button {
+/* УВАГА: .carousel-button-next сам додав */
+.carousel-button, 
+.carousel-button-next{
     display: flex;
     flex-shrink: 0;
     align-items: center;
@@ -289,7 +300,13 @@ header {
     fill: var(--color-primary-light)
 }
 
-.carousel-button {
+/* УВАГА: .carousel-button-next:hover сам додав */
+.carousel-button-next:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light)
+}
+
+.carousel-button-next {
     transform: rotate(180deg);
 }
 
@@ -542,22 +559,18 @@ header {
     position: absolute;
     left: 42px;
     top: 16px;
-    font-size: 16px;
-    line-height: 1.17;
-    color: var(--color-secondary-dark);
-    transition: transform 0.3s;
 }
 
-.form-input:focus+.form-label {
+/* .form-input:focus+.form-label {
     transform: translate(-36px, -40px);
     color: var(--color-primary-dark);
-}
+} */
 
 .form-input {
     padding: 16px 42px;
-    width: 100%;
     font-size: 16px;
     line-height: 1.17;
+    width: 100%;
     border-radius: 8px;
     border: 1px solid var(--color-secondary-dark);
     background-color: transparent;
@@ -567,6 +580,25 @@ header {
     border-color: var(--color-brand-normal);
     outline: none;
 }
+
+.form-input::placeholder {
+    color: var(--color-secondary-dark);
+    font-size: 16px;
+    line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+    color: var(--color-primary-dark);
+}
+
+
+/* .form-input:disabled {
+    border-color: lightgray;
+}
+
+.form-input:disabled::placeholder {
+    border-color: lightgray;
+} */
 
 .form-button {
     display: block;
@@ -586,3 +618,31 @@ header {
     color: var(--color-primary-dark);
     text-underline-offset: 2px;
 }
+
+/* .checkbox-input {
+    appearance: none;
+}
+
+.checkbox-label {
+    padding-left: 24px;
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+    background-color: green;
+}
+
+.checkbox-label::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border: 1px solid var(--color-primary-dark);
+    top: 0;
+    left: 0;
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+.checkbox {
+    position: relative;
+} */

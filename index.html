@@ -108,7 +108,7 @@
             <div class="container">
                 <h2 class="formats-title section-title centered">Формати</h2>
                 <div class="formats-container">
-                    <button class="carousel-button next" type="button">
+                    <button class="carousel-button" type="button">
                         <svg width="16" height="16">
                             <use href="./images/icons (1).svg#icon-arrow"></use>
                         </svg>
@@ -148,7 +148,7 @@
                             </article>
                         </li>
                     </ul>
-                    <button class="carousel-button" type="button">
+                    <button class="carousel-button-next" type="button">
                         <svg width="16" height="16">
                             <use href="./images/icons (1).svg#icon-arrow"></use>
                         </svg>
@@ -163,24 +163,36 @@
                         <h2 class="contacts-title section-title">Приєднуйся до
                             мережі пекарень</h2>
                         <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-                        <form name="contact-form" autocomplete="off" novalidate>
+                        <form name="contact-form" autocomplete="off">
                             <div class="form-field">
-                                <input class="form-input" type="text" name="user-name" id="user-name">
-                                <label class="form-label" for="user-name">Ім’я</label>
+                                <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім’я"
+                                    required minlength="3" maxlength="15">
+                                <label class="form-label visually-hidden" for="user-name">Ім’я</label>
                             </div>
-                        
+
                             <div class="form-field">
-                                <input class="form-input" type="tel" name="user-tel" id="user-tel">
-                                <label class="form-label" for="user-tel">Телефон</label>
+                                <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон"
+                                    required pattern="^\+[0-9]{12}">
+                                <label class="form-label visually-hidden" for="user-tel">Телефон</label>
                             </div>
-                        
+
                             <div class="form-field">
-                                <input class="form-input" type="email" name="user-email" id="user-email">
-                                <label class="form-label" for="user-email">Електронна пошта</label>
+                                <input class="form-input" type="email" name="user-email" id="user-email"
+                                    placeholder="Електронна пошта" required>
+                                <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
                             </div>
-                        
+
+                            <!-- <div class="checkbox">
+                                            <input type="checkbox" class="checkbox-input" id="terms-conditions" name="terms-conditions" />
+                                            <label class="checkbox-label" for="terms-conditions">
+                                                Я точно погоджуюся з політикою конфіденційності
+                                            </label>
+                                        </div> -->
+
+
                             <button class="form-button button" type="submit">Замовити дзвінок</button>
-                            <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою
+                            <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link"
+                                    href="#">політикою
                                     конфіденційності</a></p>
                         </form>
                     </div>
@@ -243,24 +255,36 @@
             <button class="modal-btn-close" type="button">Close</button>
             <h2 class="modal-title">Замовити дзвінок</h2>
             <p class="modal-text">Залишіть заявку та наш спеціаліст зв'яжеться з Вами!</p>
-            <form name="contact-form" autocomplete="off" novalidate>
+            <form name="modal-form" autocomplete="on">
                 <div class="form-field">
-                    <input class="form-input" type="text" name="user-name" id="user-name">
-                    <label class="form-label" for="user-name">Ім’я</label>
+                    <input class="form-input" type="text" name="user-name" id="user-name" placeholder="Ім’я" required
+                        minlength="3" maxlength="15">
+                    <label class="form-label visually-hidden" for="user-name">Ім’я</label>
                 </div>
 
                 <div class="form-field">
-                    <input class="form-input" type="tel" name="user-tel" id="user-tel">
-                    <label class="form-label" for="user-tel">Телефон</label>
+                    <input class="form-input" type="tel" name="user-tel" id="user-tel" placeholder="Телефон" required
+                        pattern="^\+[0-9]{12}">
+                    <label class="form-label visually-hidden" for="user-tel">Телефон</label>
                 </div>
 
                 <div class="form-field">
-                    <input class="form-input" type="email" name="user-email" id="user-email">
-                    <label class="form-label" for="user-email">Електронна пошта</label>
+                    <input class="form-input" type="email" name="user-email" id="user-email"
+                        placeholder="Електронна пошта" required>
+                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
                 </div>
+
+                <!-- <div class="checkbox">
+                    <input type="checkbox" class="checkbox-input" id="terms-conditions" name="terms-conditions" />
+                    <label class="checkbox-label" for="terms-conditions">
+                        Я точно погоджуюся з політикою конфіденційності
+                    </label>
+                </div> -->
+
 
                 <button class="form-button button" type="submit">Замовити дзвінок</button>
-                <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою конфіденційності</a></p>
+                <p class="form-terms">Натискаючи на кнопку я погоджуюсь з <a class="form-terms-link" href="#">політикою
+                        конфіденційності</a></p>
             </form>
         </div>
     </div>
